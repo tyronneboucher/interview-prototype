@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Interview Management System</title>
   <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header>
@@ -20,12 +21,12 @@
     <section class="card" id="dashboard">
       <h2>HR Dashboard</h2>
       <p>View upcoming interviews, assign panel members, and access reports.</p>
-      <button class="btn">View Interviews</button>
+      <button class="btn" onclick="alert('Viewing interviews not yet implemented.')">View Interviews</button>
     </section>
 
     <section class="card" id="create">
       <h2>Create Interview</h2>
-      <form>
+      <form id="interviewForm">
         <label for="title">Vacancy Title</label>
         <input type="text" id="title" placeholder="Enter title...">
 
@@ -45,26 +46,29 @@
     <section class="card" id="score">
       <h2>Score Candidate</h2>
       <p>Candidate: John Doe</p>
-      <label for="q1">Q1: Case Study</label>
-      <select id="q1">
-        <option value="1">1 - Poor</option>
-        <option value="2">2 - Fair</option>
-        <option value="3">3 - Good</option>
-        <option value="4">4 - Very Good</option>
-        <option value="5">5 - Excellent</option>
-      </select>
+      <form id="scoreForm">
+        <label for="q1">Q1: Case Study</label>
+        <select id="q1">
+          <option value="">Select score</option>
+          <option value="1">1 - Poor</option>
+          <option value="2">2 - Fair</option>
+          <option value="3">3 - Good</option>
+          <option value="4">4 - Very Good</option>
+          <option value="5">5 - Excellent</option>
+        </select>
 
-      <label for="comment1">Comment</label>
-      <textarea id="comment1" placeholder="Enter comment..."></textarea>
+        <label for="comment1">Comment</label>
+        <textarea id="comment1" placeholder="Enter comment..."></textarea>
 
-      <button class="btn">Submit Score</button>
+        <button class="btn" type="submit">Submit Score</button>
+      </form>
     </section>
 
     <section class="card" id="report">
       <h2>Reports</h2>
       <p>Generate reports for completed interviews.</p>
-      <button class="btn">Download PDF</button>
-      <button class="btn">Download Excel</button>
+      <button class="btn" onclick="alert('PDF download simulation')">Download PDF</button>
+      <button class="btn" onclick="alert('Excel download simulation')">Download Excel</button>
     </section>
   </main>
 </body>
