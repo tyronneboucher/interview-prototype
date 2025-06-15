@@ -1,28 +1,71 @@
-Interview Management System
-Dashboard Create Interview Score Candidate Reports
-HR Dashboard
-View upcoming interviews, assign panel members, and access reports.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interview Management System</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Interview Management System</h1>
+  </header>
+  <nav>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#create">Create Interview</a>
+    <a href="#score">Score Candidate</a>
+    <a href="#report">Reports</a>
+  </nav>
+  <main>
+    <section class="card" id="dashboard">
+      <h2>HR Dashboard</h2>
+      <p>View upcoming interviews, assign panel members, and access reports.</p>
+      <button class="btn">View Interviews</button>
+    </section>
 
-View Interviews
-Create Interview
-Vacancy Title 
-Enter title...
- Reference Number 
-e.g. VAC-2025-01
- Date 
-dd --- yyyy
- Venue 
-Boardroom A
- Save Interview
-Score Candidate
-Candidate: John Doe
+    <section class="card" id="create">
+      <h2>Create Interview</h2>
+      <form>
+        <label for="title">Vacancy Title</label>
+        <input type="text" id="title" placeholder="Enter title...">
 
-Q1: Case Study 
-1 - Poor
- Comment 
-Enter comment...
- Submit Score
-Reports
-Generate reports for completed interviews.
+        <label for="ref">Reference Number</label>
+        <input type="text" id="ref" placeholder="e.g. VAC-2025-01">
 
-Download PDF Download Excel
+        <label for="date">Date</label>
+        <input type="date" id="date">
+
+        <label for="venue">Venue</label>
+        <input type="text" id="venue" placeholder="Boardroom A">
+
+        <button class="btn" type="submit">Save Interview</button>
+      </form>
+    </section>
+
+    <section class="card" id="score">
+      <h2>Score Candidate</h2>
+      <p>Candidate: John Doe</p>
+      <label for="q1">Q1: Case Study</label>
+      <select id="q1">
+        <option value="1">1 - Poor</option>
+        <option value="2">2 - Fair</option>
+        <option value="3">3 - Good</option>
+        <option value="4">4 - Very Good</option>
+        <option value="5">5 - Excellent</option>
+      </select>
+
+      <label for="comment1">Comment</label>
+      <textarea id="comment1" placeholder="Enter comment..."></textarea>
+
+      <button class="btn">Submit Score</button>
+    </section>
+
+    <section class="card" id="report">
+      <h2>Reports</h2>
+      <p>Generate reports for completed interviews.</p>
+      <button class="btn">Download PDF</button>
+      <button class="btn">Download Excel</button>
+    </section>
+  </main>
+</body>
+</html>
